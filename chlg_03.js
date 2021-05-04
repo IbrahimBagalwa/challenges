@@ -14,4 +14,21 @@ function solution(number){
         x + y
     ,0)
 }
-console.log(solution(700));
+// console.log(solution(2));
+ 
+function impair(nub){
+    let nbr = [];
+    for(let i = 0; i< nub; i++){
+        if(i%(2)!==0){
+            nbr.push(i);
+        }
+    }
+    return nbr;
+ }
+//  console.log(impair(5))
+
+function stringLetter(str){
+    const mot = str.charAt(0)
+    return mot
+}
+console.log(stringLetter("jtm"));
