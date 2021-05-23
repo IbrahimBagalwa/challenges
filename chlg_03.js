@@ -14,7 +14,7 @@ function solution(number){
         x + y
     ,0)
 }
-// console.log(solution(2));
+console.log(solution(30));
  
 function impair(nub){
     let nbr = [];
@@ -31,4 +31,4 @@ function stringLetter(str){
     const mot = str.charAt(0)
     return mot
 }
-console.log(stringLetter("jtm"));
+// console.log(stringLetter("jtm"));

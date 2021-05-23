@@ -10,8 +10,7 @@
 function toJadenCase(str){
     let phrase= str.split(' ');
     return phrase.map((mot)=>
-        mot[0].toUpperCase()
-        
+        mot.replace(mot.charAt(0).toUpperCase())
     )
 }
 

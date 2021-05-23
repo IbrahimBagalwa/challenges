@@ -6,6 +6,6 @@
 
 
 function treeVowels(str){
-    return str.replace(/[aeiouyAEIOUY]/g,"");
+    return str.replace(/[aeiouy | AEIOUY]/g,"");
 }
 console.log(treeVowels("la fonction fait le triage de voyelles dans cette phrase"));
