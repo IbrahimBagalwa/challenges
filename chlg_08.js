@@ -1,20 +1,18 @@
 /*
     grading student
 */
-function gradingStudents(grade){
-    let nextNumber;
-        for(let i=grade; i<=100; i++){
-            if(i%5==0 && i>grade){
-                return nextNumber = i;
-            }
+function gradingStudents(grades) {
+    // Write your code here
+  
+        let SupNextNumber;
+        for(let i=grades; i<=100; i++){
+                if(i%5==0 && i>grades){
+                    return SupNextNumber = i;
+                }
         }
-        let sum = nextNumber - grade
-        if(sum>3){
-            return grade
-        }else{
-            return nextNumber
-        }
-        
-        return nextNumber
+        if(grades>38){
+            if(SupNextNumber - grades >=3) return grades;
+            else return SupNextNumber;
+        }else return grades;
 }
-console.log(gradingStudents(73))
+console.log(gradingStudents([33,73,67]))
