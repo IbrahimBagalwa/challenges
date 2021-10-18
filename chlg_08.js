@@ -2,17 +2,21 @@
     grading student
 */
 function gradingStudents(grades) {
-    // Write your code here
-  
-        let SupNextNumber;
-        for(let i=grades; i<=100; i++){
-                if(i%5==0 && i>grades){
-                    return SupNextNumber = i;
-                }
+    let next=[];
+    for(let i = 1; i>grades; i++){
+        if(i%5==0){
+            next.push(i)
         }
-        if(grades>38){
-            if(SupNextNumber - grades >=3) return grades;
-            else return SupNextNumber;
-        }else return grades;
+    }
+    // for(let j=0; j<grades.length;j++){
+    //    if(grades[j]<38){
+    //         console.log(grades) ;
+    //    }
+    //    else if (next - grades[i]){
+
+    //    }
+    // }
+
+    return next;
 }
-console.log(gradingStudents([33,73,67]))
+console.log(gradingStudents([73,67,33]))
