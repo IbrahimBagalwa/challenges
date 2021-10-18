@@ -1,18 +1,35 @@
 /*
     grading student
 */
-function gradingStudents(grades) {
-    // Write your code here
-  
-        let SupNextNumber;
-        for(let i=grades; i<=100; i++){
-                if(i%5==0 && i>grades){
-                    return SupNextNumber = i;
-                }
+function mult(m){
+    for(let i=m; i<=100; i++){
+        if(i%5===0 && i>m){
+           return i 
         }
-        if(grades>38){
-            if(SupNextNumber - grades >=3) return grades;
-            else return SupNextNumber;
-        }else return grades;
+    }
 }
-console.log(gradingStudents([33,73,67]))
+
+function gradingStudents(grades) {
+    let multiple =[]
+    
+    for(let j =0; j<grades.length; j++){
+   
+        let d = 5 - (grades[j]%5);
+        if(grades[j] >= 38){
+            if(d<3){
+                multiple.push(grades[j]+d)
+            }
+            else{
+                multiple.push(grades[j]);
+            }
+        }else{
+            multiple.push(grades[j]);
+        }
+       
+    
+  
+    }
+    
+    return multiple
+}
+console.log(gradingStudents([73,80,33]))
