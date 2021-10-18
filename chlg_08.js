@@ -1,22 +1,35 @@
 /*
     grading student
 */
-function gradingStudents(grades) {
-    let next=[];
-    for(let i = 1; i>grades; i++){
-        if(i%5==0){
-            next.push(i)
+function mult(m){
+    for(let i=m; i<=100; i++){
+        if(i%5===0 && i>m){
+           return i 
         }
     }
-    // for(let j=0; j<grades.length;j++){
-    //    if(grades[j]<38){
-    //         console.log(grades) ;
-    //    }
-    //    else if (next - grades[i]){
-
-    //    }
-    // }
-
-    return next;
 }
-console.log(gradingStudents([73,67,33]))
+
+function gradingStudents(grades) {
+    let multiple =[]
+    
+    for(let j =0; j<grades.length; j++){
+   
+        let d = 5 - (grades[j]%5);
+        if(grades[j] >= 38){
+            if(d<3){
+                multiple.push(grades[j]+d)
+            }
+            else{
+                multiple.push(grades[j]);
+            }
+        }else{
+            multiple.push(grades[j]);
+        }
+       
+    
+  
+    }
+    
+    return multiple
+}
+console.log(gradingStudents([73,80,33]))
