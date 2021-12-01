@@ -11,3 +11,6 @@ console.log(`le caractere a l'index ${index} est ${phrase.charAt(index)}`);
 const h = "Hello";
 const w = "world";
 console.log(h.concat(' ' + w))
+
+var b = ["Bonjour",' ', "Josh",' ', "!"]
+console.log("".concat(...b))
