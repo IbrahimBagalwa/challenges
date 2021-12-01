@@ -14,3 +14,8 @@ console.log(h.concat(' ' + w))
 
 var b = ["Bonjour",' ', "Josh",' ', "!"]
 console.log("".concat(...b))
+
+// includes() methode il renvoi true or false selon le cas de figure
+
+const word = "nouvelle";
+console.log(phrase.includes(word))
