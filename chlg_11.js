@@ -7,7 +7,6 @@ const phrase ="la methode renvoie la nouvelle chaine contenant le caractere a la
 const index = 7;
 console.log(`le caractere a l'index ${index} est ${phrase.charAt(index)}`); // o
 // la methode concat
-
 const h = "Hello";
 const w = "world";
 console.log(h.concat(' ' + w))//hello word
@@ -19,3 +18,6 @@ console.log("".concat(...b))//bonjour josh !
 
 const word = "nouvelle";
 console.log(phrase.includes(word))//true
+
+// indexOf() renvoie l'indice de la premiere occurence de la valeur cherchee au sein de la chaine courante 
+// elle renvoie -1 si la reponse n'est pas trouvee
