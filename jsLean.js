@@ -63,13 +63,13 @@ function grade(fsname,lsname, ...grades){
         grd:grd
     }
 }
-console.log(grade("Nick", "John",10, 12, 15, 60))
+console.log(grade("Nick", "John",10, 12, 15, 60));
 
 /*
-pop(): supprimer le dernier element du tableau;
-shift(): supprimer le premier element du tableau
-push(): ajouter a la fin du tableau
-forEach():boucler sur un tableau
+    pop(): supprimer le dernier element du tableau;
+    shift(): supprimer le premier element du tableau
+    push(): ajouter a la fin du tableau
+    forEach():boucler sur un tableau
 */
 
 let arr = ['apple', 'banana', 'avocat'];
