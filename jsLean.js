@@ -64,3 +64,8 @@ function grade(fsname,lsname, ...grades){
     }
 }
 console.log(grade("Nick", "John",10, 12, 15, 60))
+
+
+let fr = ['apple', 'banana', 'avocat'];
+let ft = fr[fr.length - 1]
+console.log(ft)
