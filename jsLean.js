@@ -70,16 +70,25 @@ console.log(grade("Nick", "John",10, 12, 15, 60));
     shift(): supprimer le premier element du tableau
     push(): ajouter a la fin du tableau
     forEach():boucler sur un tableau
+    unshift(): ajouter au debut du tableau
 */
 
 let arr = ['apple', 'banana', 'avocat'];
-let lastIndex = arr[arr.length - 1]
-console.log(lastIndex)
 arr.push('orange');
 console.log(arr)
+
+let lastIndex = arr[arr.length - 1]
+console.log(lastIndex)
 
 arr.forEach((item, index)=>{
     console.log(item, index)
 })
+
 arr.pop();
 console.log(arr);
+
+arr.shift();
+console.log(arr)
+
+arr.unshift('Sweet')
+console.log(arr)
