@@ -92,3 +92,8 @@ console.log(arr)
 
 arr.unshift('Sweet')
 console.log(arr)
+
+let salary = 100;
+let oldSalary = salary;
+salary = 200000;
+console.log(`there is a salary: ${salary} and there is the oldSalary: ${oldSalary}`)
