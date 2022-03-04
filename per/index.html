@@ -1,9 +1,23 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <script src="./index.js" defer></script>
     </head>
     <body>
+        <h1 id="welcom"></h1>
         <h1>People entred:</h1>
         <h2 id="count-el">0</h2>
+        <button id="increment-btn"onclick="incrementEl()">INCREMENT</button>
+        <button id="save-btn" onclick="save()">SAVE</button>
+        <p id="save-el">Prevous save: </p>
+
+        <span id="num-el"></span>
+        <span id="num2-el"></span>
+        <br>
+        <button onclick="add()">Add</button>
+        <button onclick="sub()">Substract</button>
+        <button onclick="div()">Divide</button>
+        <button onclick="mul()">Multiply</button>
+        <p id="sum-el">Sum = </p>
     </body>
 </html>
