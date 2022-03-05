@@ -8,4 +8,18 @@
 function treeVowels(str){
     return str.replace(/[aeiouy | AEIOUY]/g,"");
 }
-console.log(treeVowels("la fonction fait le triage de voyelles dans cette phrase"));
+// console.log(treeVowels("la fonction fait le triage de voyelles dans cette phrase"));
+
+
+/*  What does Math.random() do ??
+    it generates a random number between 0 and 1 (not inclusive of 1)
+    eg: 0.00000, 0.22223048725, 0.9999999 // not 1.000004324
+
+    What does Math.floor do to positive numbers ??
+    it removes the decimals
+*/
+function rollDice(){
+    let randNumber = Math.floor(Math.random() * 6 ) + 1;
+    return randNumber;
+}
+console.log(rollDice());
