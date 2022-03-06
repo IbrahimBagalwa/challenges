@@ -47,6 +47,10 @@ const numbers = [1,2,3,4,5,6,7,8,9];
 const pair = numbers.filter(function(n){
     return n % 2 === 0
 });
+for(let i = 0; i<numbers.length; i++){
+    let p = numbers[i].filter(it=> it % 2 ===0);
+    console.log(p);
+}
 // console.log(pair)
 
 const double =(n)=> n*2;
@@ -63,7 +67,7 @@ function grade(fsname,lsname, ...grades){
         grd:grd
     }
 }
-console.log(grade("Nick", "John",10, 12, 15, 60));
+// console.log(grade("Nick", "John",10, 12, 15, 60));
 
 /*
     pop(): supprimer le dernier element du tableau;
@@ -75,25 +79,25 @@ console.log(grade("Nick", "John",10, 12, 15, 60));
 
 let arr = ['apple', 'banana', 'avocat'];
 arr.push('orange');
-console.log(arr)
+// console.log(arr)
 
 let lastIndex = arr[arr.length - 1]
-console.log(lastIndex)
+// console.log(lastIndex)
 
 arr.forEach((item, index)=>{
-    console.log(item, index)
+    // console.log(item, index)
 })
 
 arr.pop();
-console.log(arr);
+// console.log(arr);
 
 arr.shift();
-console.log(arr)
+// console.log(arr)
 
 arr.unshift('Sweet')
-console.log(arr)
+// console.log(arr)
 
 let salary = 100;
 let oldSalary = salary;
 salary = 200000;
-console.log(`there is a salary: ${salary} and there is the oldSalary: ${oldSalary}`)
+// console.log(`there is a salary: ${salary} and there is the oldSalary: ${oldSalary}`);

@@ -23,3 +23,12 @@ function rollDice(){
     return randNumber;
 }
 console.log(rollDice());
+
+let hands = ["rock", "paper", "scissor"];
+function gethandsRandom (){
+    // for(let i = 0; i<hands.length; i++){
+        let randomIndex = Math.floor(Math.random() * hands.length);
+        console.log(hands[randomIndex]);
+    // }
+}
+gethandsRandom()
