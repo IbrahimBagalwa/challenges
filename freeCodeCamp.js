@@ -76,25 +76,14 @@ const names = [
   'Go Home!',
 ]
 
-function golfScore(par, strokes) {
-  // Only change code below this line
-  if (strokes - par === 1) {
-    return 'Hole-in-one'
-  } else if (strokes <= par - 2) {
-    return 'Eagle'
-  } else if (strokes === par - 1) {
-    return 'Birdie'
-  } else if (strokes === par) {
-    return 'Par'
-  } else if (strokes === par + 1) {
-    return 'Bogey'
-  } else if (strokes === par + 2) {
-    return 'Double Bogey'
-  } else {
-    return 'Go Home'
-  }
+// Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp). If the property is found, return that property's value. If not, return "Not Found".
 
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp]
+  }
+  return 'Not Found'
   // Only change code above this line
 }
-
-console.log(golfScore(5, 4))
+console.log({ gift: 'pony', pet: 'kitten', bed: 'sleigh' }, 'gift')
