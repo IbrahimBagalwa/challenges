@@ -86,7 +86,7 @@ function checkObj(obj, checkProp) {
   return 'Not Found'
   // Only change code above this line
 }
-console.log({ gift: 'pony', pet: 'kitten', bed: 'sleigh' }, 'gift')
+// console.log({ gift: 'pony', pet: 'kitten', bed: 'sleigh' }, 'gift')
 /*
 You are given an object literal representing a part of your musical album collection. Each album has a unique id number as its key and several other properties. Not all albums have complete information.
 
@@ -137,4 +137,12 @@ function updateRecords(records, id, prop, value) {
   return records
 }
 
-updateRecords(recordCollection, 5439, 'artist', 'ABBA')
+// updateRecords(recordCollection, 5439, 'artist', 'ABBA')
+
+const myArrays = []
+let num = 5
+while (num >= 0) {
+  myArrays.push(num)
+  num--
+}
+console.log(myArrays)
