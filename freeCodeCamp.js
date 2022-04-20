@@ -165,4 +165,10 @@ function multiplyAll(arr) {
   // Only change code above this line
   return product
 }
-console.log(multiplyAll([[1], [2], [3]]))
+// console.log(multiplyAll([[1], [2], [3]]))
+
+const dessert = { type: 'pie' }
+dessert.type = 'pudding'
+const seconds = dessert
+seconds.type = 'fruit'
+console.log(dessert)
