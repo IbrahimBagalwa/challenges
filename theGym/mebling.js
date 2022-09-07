@@ -11,3 +11,13 @@ function accum(s) {
   return result.join('-');
 }
 console.log(accum('abcde'));
+
+// with map
+function membling(s) {
+  return s
+    .split('')
+    .map((c, i) => c.toLowerCase() + c.toUpperCase().repeat(i))
+    .join('-');
+}
+
+console.log(membling('fghijk'));
