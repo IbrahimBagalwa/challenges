@@ -15,13 +15,14 @@ function findNeedle(haystack) {
   // your code here
   const needle = (element) => element === 'needle';
   const indx = haystack.findIndex(needle);
+  console.log('textoutput: ', indx);
   if (indx !== -1) {
     return `found the needle at position ${indx}`;
+  } else {
+    return 'something went wrong in our array';
   }
 }
-// console.log(
-//   findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])
-// );
+// console.log(findNeedle(['hay', 'hay', 'hay', 'moreJunk', 'randomJunk']));
 
 /*
     Write a function which calculates the average of the numbers in a given list.
@@ -33,12 +34,13 @@ function find_average(array) {
   const sum = array.reduce((a, b) => a + b, 0);
   const lengthArray = array.length;
   let total = 0;
+
   if (lengthArray) {
     total = sum / lengthArray;
   }
   return total;
 }
-// console.log(find_average([]));
+console.log(find_average([]));
 
 /*
     Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
@@ -67,4 +69,11 @@ function moveZeros(arr) {
   }
   return newArr.flatMap((el) => el);
 }
-console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]));
+// console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]));
+// [[false, 1 2 1], [0,0]]
+
+var result = 12;
+for (var i = result - 1; i >= 1; i--) {
+  result = result * i;
+}
+console.log(result);
