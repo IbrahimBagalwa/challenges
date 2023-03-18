@@ -18,11 +18,7 @@ const processStudents = (data, cb) => {
   }
 };
 
-processStudents(students, (obj) => {
-  if (obj.scrore > 60) {
-    return obj.name, "Passed the test";
-  }
-});
+console.log("Before determining the total");
 let determineTotal = () => {
   let total = 0,
     count = 0;
@@ -32,4 +28,5 @@ let determineTotal = () => {
   });
   console.log("Total Score: " + total + " - Total Count: " + count);
 };
-determineTotal();
+setTimeout(determineTotal, 0);
+console.log("End of the code");
