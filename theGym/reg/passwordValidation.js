@@ -1,5 +1,4 @@
 function password(str) {
-  //validate password
   return (
     /[a-z]+/.test(str) &&
     /[A-Z]+/.test(str) &&
