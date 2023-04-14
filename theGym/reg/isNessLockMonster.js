@@ -10,7 +10,7 @@ Since Nessie is a master of disguise, the only way accurately tell is to look fo
  * @returns 
  */
 function isNessLockMonster(s) {
-  return /3.50/.test(s) || /three fify/.test(s) || /tree fiddy/.test(s);
+  return /3.50|three fify|tree fiddy/.test(s);
 }
 console.log(
   isNessLockMonster(
