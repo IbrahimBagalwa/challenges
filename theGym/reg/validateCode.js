@@ -5,7 +5,7 @@
  */
 function validateCode(code) {
   //your code here
-  return /^[1-2-3][\d]/.test(code);
+  return /^[1-3][\d]/.test(code);
 }
 console.log(validateCode(123));
 console.log(validateCode(4132));
