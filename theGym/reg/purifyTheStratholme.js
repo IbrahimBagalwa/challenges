@@ -23,14 +23,15 @@
  */
 
 function purifyTheStratholme(s) {
+  console.log(s.replace(/.?i+.?/gi, "").trim()); // this is the short solution and the best one it says any character whatsoever that can be optional follow by one ore more 'i' followed by any character whatsoever that can be optional too.
   return s
     .replace(/\w?i+\w?/gi, "")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-// purifyTheStratholme("Iron Maiden");
+purifyTheStratholme("Iron Maiden");
 purifyTheStratholme("It is a bit chilly");
-// purifyTheStratholme("Pineapple pizza is delicious");
-// purifyTheStratholme("1i2 33 i4i5 i555ii5");
+purifyTheStratholme("Pineapple pizza is delicious");
+purifyTheStratholme("1i2 33 i4i5 i555ii5");
 purifyTheStratholme("The tea in Nepal is very hot");
