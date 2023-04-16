@@ -21,10 +21,14 @@ function removeConsecutiveRepetution(w) {
    * return newArray.join(" ");}
    */
   // with filter
-  return (strArr = w
-    .split(" ")
-    .filter((element, index, arr) => element !== arr[index + 1])
-    .join(" "));
+  /**
+   * @param {
+   * return (strArr = w.split(" ").filter((element, index, arr) => element !== arr[index + 1]).join(" "));
+   *
+   * }
+   */
+
+  return w.replace(/\b(\w+)\s(?=\1\b)/g, "");
 }
 console.log(
   removeConsecutiveRepetution(
