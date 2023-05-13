@@ -1,6 +1,6 @@
 function doubleWorld(str) {
   const arr = str.split("");
-  let string = [];
+  const string = [];
   for (let i = 0; i < arr.length; i++) {
     string.push(arr[i] + arr[i]);
   }
