@@ -10,4 +10,15 @@ function deleteNth(arr, n) {
       )
     : arr;
 }
-console.log(deleteNth([20, 37, 20, 21], 1));
+// console.log(deleteNth([20, 37, 20, 21], 1));
+
+function commonItems(ar1, ar2) {
+  let result = false;
+  for (let i = 0; i < ar1.length; i++) {
+    result = ar2.includes(ar1[i]);
+  }
+  return result;
+}
+const containCommonItems = (array1, array2) =>
+  array1.some((value) => array2.includes(value));
+// console.log(commonItems(["a", "b", "c", "x"], ["z", "y", "i", "x"]));
