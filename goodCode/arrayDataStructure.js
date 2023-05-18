@@ -15,3 +15,8 @@ strings.shift(); // delete the first element. O(n)-> here is O(n) because we hav
 strings.splice(Math.floor(strings.length / 2), 0, "|"); // the big O here is O(n) why because the have again to loop over the array to change the indexes of items.
 
 console.log(strings);
+
+let arr = ["KC", "KH", "QC", "KS", "KD", "QH", "QD", "QS"];
+
+console.log([9, 4, 5, 64, 3, 4, 5].sort((a, b) => a - b));
+console.log(arr.sort((a, b) => a.localeCompare(b)));
