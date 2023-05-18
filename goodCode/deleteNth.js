@@ -21,4 +21,3 @@ function commonItems(ar1, ar2) {
 }
 const containCommonItems = (array1, array2) =>
   array1.some((value) => array2.includes(value));
-// console.log(commonItems(["a", "b", "c", "x"], ["z", "y", "i", "x"]));
