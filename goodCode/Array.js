@@ -26,12 +26,24 @@ class ArrayDataStructure {
     this.length--;
     return firstItem;
   }
+  unshift(item) {
+    if (this.length == 0) {
+      this.data[this.length] = item;
+      this.length++;
+    }
+    // for (let key in this.data) {
+    //   //   this.data["0"] = item;
+    //   console.log("This dot data:", key);
+    // }
+    return this.length;
+  }
 }
 
 const myArray = new ArrayDataStructure();
-console.log(myArray.push("Olivier"));
-console.log(myArray.push("Peter"));
-console.log(myArray.push("Orn"));
+// console.log(myArray.push("Olivier"));
+// console.log(myArray.push("Peter"));
+// console.log(myArray.push("Orn"));
+console.log(myArray.unshift("kakakak"));
 // console.log(myArray.pop());
-console.log(myArray.shift());
+// console.log(myArray.shift());
 console.log(myArray);
