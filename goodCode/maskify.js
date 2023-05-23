@@ -15,4 +15,15 @@ function reverse(str) {
   //   }
   return [...str].reverse().join("");
 }
-console.log(reverse("Hi my name is Ibrahim"));
+// console.log(reverse("Hi my name is Ibrahim"));
+
+const mergeSorted = (arr, arr2) => {
+  return [...arr, ...arr2].sort((a, b) => a - b);
+};
+// console.log(mergeSorted([0, 3, 4, 31], [4, 6, 30]));
+
+function findDigit(array) {
+  return array.find((el, idx, arr) => arr.indexOf(el) === arr.lastIndexOf(el));
+}
+
+console.log(findDigit([1, 1, 1, 2, 1, 1, 1, 1]));
