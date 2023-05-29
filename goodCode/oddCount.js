@@ -6,4 +6,5 @@ function oddCount(n) {
     }
   }
   return result.length;
+  //   retun Math.floor(n/2) this is the easiest way to do this challenge
 }
