@@ -41,7 +41,6 @@ const objName = new ObjClass("Ibrahim", 2020);
 console.log(objName);
 
 // we can create an object with the sigleton pattern
-
 const objSingle = new (function (name) {
   this.name = name;
 })();
