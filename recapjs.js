@@ -100,6 +100,9 @@ curryingFunc(10); // 10+b+c
 curryingFunc(10)(2); // 10 +2+c
 curryingFunc(10)(2)(3); // 10+2+3
 
+// what is a pure function?
+// pure function is a function where its arguments will determine the return value without any side effects.
+const pureFunc = (a, b) => a + b; // no matter how many time this function get caalled its return value will be determined by the arguments.
 function func1() {
   return {
     value: "session",
