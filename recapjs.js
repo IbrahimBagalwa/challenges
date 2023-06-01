@@ -77,6 +77,29 @@ console.log(arraySlice, returnArray);
 // what is the first order function?
 // it's a function that doesn't accept other function as argument and it cannot return a function as its value
 
+// what is the hoc functions?
+// hoc functions are just functions that can accept other function as argument and return a function as its value
+const funcFoc = () => console.log("i'm just a first order function");
+const hoc = (firstOFC) => firstOFC();
+hoc(funcFoc);
+
+// what is a unary function?
+// unary function is a function that accept exactly one argument.
+const unary = (a) => a + 10;
+unary(10);
+
+// what is a currying function?
+// currying is a process of taking a function that accepts multiple arguments and turn it into a sequence of functions with single argument.
+
+const multipleArgument = (a, b, c) => a + b + c;
+multipleArgument(10, 2, 3); // 15
+
+// turn it into a sequence of functions with single argument.(currying)
+const curryingFunc = (a) => (b) => (c) => a + b + c;
+curryingFunc(10); // 10+b+c
+curryingFunc(10)(2); // 10 +2+c
+curryingFunc(10)(2)(3); // 10+2+3
+
 function func1() {
   return {
     value: "session",
