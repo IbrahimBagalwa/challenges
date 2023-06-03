@@ -116,3 +116,16 @@ function func2() {
   }
 }
 func2();
+
+// what is IIFE?
+// It is a function that run as soon as it is defined, the purpose of the IIFE is to obtain data previcy and the variable declare into IIFE cannot be accessed outside.
+(function () {
+  var message = "IIFE";
+  console.log(message);
+})();
+// console.log(message); //ReferenceError: message is not defined
+let uri =
+  "https://github.com/sudheerj/javascript-interview-questions#what-are-the-possible-ways-to-create-objects-in-javascript";
+const urlEncod = encodeURIComponent(uri);
+console.log(urlEncod);
+const urlDecod = decodeURI(uri);
