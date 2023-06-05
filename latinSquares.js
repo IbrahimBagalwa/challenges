@@ -6,5 +6,6 @@ function makeLatinSquare(n) {
       square[j][i] = ((i + j) % n) + 1;
     }
   }
+
   return square;
 }

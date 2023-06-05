@@ -129,3 +129,9 @@ let uri =
 const urlEncod = encodeURIComponent(uri);
 console.log(urlEncod);
 const urlDecod = decodeURI(uri);
+
+let newArray = [];
+const pureFunction = (number) => (arrayNumber) => arrayNumber.concat(number);
+const impureFunction = (number) => newArray.push(number);
+
+// what is memoization : is a technic in programming language which attempts to increase function's peformance by caching its previously computed result.
