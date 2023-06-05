@@ -8,5 +8,3 @@ function makeLatinSquare(n) {
   }
   return square;
 }
-
-console.log(makeLatinSquare(2));
