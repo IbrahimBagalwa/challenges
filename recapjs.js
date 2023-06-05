@@ -135,3 +135,25 @@ const pureFunction = (number) => (arrayNumber) => arrayNumber.concat(number);
 const impureFunction = (number) => newArray.push(number);
 
 // what is memoization : is a technic in programming language which attempts to increase function's peformance by caching its previously computed result.
+
+// what is hoisting: is a mecanism where variables, function declarations and class are moved on the top of their scope before code execution.
+// what is class in ES6: classes are syntax sugar over javascript;s existing prototype-based inheritance.
+function Interview(name) {
+  this.name = name;
+}
+Interview.prototype.getResult = function (point) {
+  return this.name + " you get a result of " + point;
+};
+const newInterview = new Interview("Ibrahim");
+console.log(newInterview.getResult(10));
+
+class Interviewee {
+  constructor(name) {
+    this.name = name;
+  }
+  getResultPoint(point) {
+    return this.name + " you get a result of " + point;
+  }
+}
+const inter = new Interviewee("Alain");
+console.log(inter.getResultPoint(10));
