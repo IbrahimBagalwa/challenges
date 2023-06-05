@@ -157,3 +157,20 @@ class Interviewee {
 }
 const inter = new Interviewee("Alain");
 console.log(inter.getResultPoint(10));
+
+// what is closure:
+// closure is a combination of function witch the inner function will access the outer variable even if the outer function has finished to execute.
+function outerFunction() {
+  let result = 20;
+  function innerFunction() {
+    return `this function will use the outer values ${result}`;
+  }
+  return innerFunction;
+}
+console.log(outerFunction()());
+
+// what is module in js
+// module is small units independent and reusuable code. the purpose of the module is they are reusable, maintainable and namespaceable.
+
+// what is scope
+//  scope is the accessibility of variables, functions, objects, in particular block during the runtime.
