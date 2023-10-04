@@ -48,13 +48,46 @@ class Stack {
   }
 }
 
-const stack = new Stack();
-console.log(stack.isEmpty());
-console.log(stack.push("first"));
-console.log(stack.push("last"));
-console.log(stack.push("removed elements"));
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.peek());
-console.log(stack.isEmpty());
+// const stack = new Stack();
+// console.log(stack.isEmpty());
+// console.log(stack.push("first"));
+// console.log(stack.push("last"));
+// console.log(stack.push("removed elements"));
+// console.log(stack.pop());
+// console.log(stack.pop());
+// console.log(stack.pop());
+// console.log(stack.peek());
+// console.log(stack.isEmpty());
+
+class StackArray {
+  constructor() {
+    this.array = [];
+  }
+  peek() {
+    return this.array[this.array.length - 1];
+  }
+  push(value) {
+    this.array.push(value);
+    return this;
+  }
+  pop() {
+    const poped = this.array.pop();
+    return poped;
+  }
+  isEmpty() {
+    if (this.array.length) {
+      return this.array;
+    }
+    return this.array.length;
+  }
+}
+
+const stackArray = new StackArray();
+console.log(stackArray.isEmpty());
+console.log(stackArray.peek());
+console.log(stackArray.push("first"));
+console.log(stackArray.push("last"));
+// console.log(stackArray.push("removed elements"));
+// console.log("poped", stackArray.pop());
+// console.log("poped", stackArray.pop());
+// console.log("value in array", stackArray.isEmpty());
