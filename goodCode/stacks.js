@@ -25,7 +25,7 @@ class Stack {
       this.top.next = holdingPointer;
     }
     this.length += 1;
-    return this.length;
+    return this;
   }
   pop() {
     if (this.top) {
@@ -34,7 +34,11 @@ class Stack {
 
       this.length -= 1;
       return holdingPointer;
-    } else return undefined;
+    }
+    if (this.bottom === this.top) {
+      this.bottom = null;
+    }
+    return undefined;
   }
   isEmpty() {
     if (this.length === 0) {
@@ -49,6 +53,8 @@ console.log(stack.isEmpty());
 console.log(stack.push("first"));
 console.log(stack.push("last"));
 console.log(stack.push("removed elements"));
-console.log("poped Element: ", stack.pop());
-console.log("This is the topest element: ", stack.peek());
+console.log(stack.pop());
+console.log(stack.pop());
+console.log(stack.pop());
+console.log(stack.peek());
 console.log(stack.isEmpty());
