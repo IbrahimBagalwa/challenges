@@ -29,9 +29,16 @@ To begin, get your puzzle input: https://adventofcode.com/2023/day/1/input
  */
 
 function firstAndLastNumbers(str) {
-  const firstNumber = parseInt(str.match(/\d+/));
-  const lastNumber = parseInt(str.split("").reverse().join("").match(/\d+/));
-  return `${firstNumber}${lastNumber}`;
+  const array = [];
+  const firstNumber = parseInt(str.match(/\d/g));
+  const lastNumber = parseInt(str.split("").reverse().join("").match(/\d/g));
+  if (!isNaN(firstNumber) && !isNaN(lastNumber)) {
+    return `${firstNumber}${lastNumber}`;
+  } else {
+    array.push(firstNumber);
+    array.push(lastNumber);
+  }
+  console.log(array);
 }
 
 function rebuchet(inputPuzzle) {
@@ -40,8 +47,8 @@ function rebuchet(inputPuzzle) {
   for (let i = 0; i < lines.length; i++) {
     arrNumber.push(firstAndLastNumbers(lines[i]));
   }
-  arrNumber.pop();
-  return arrNumber.reduce((acc, cur) => Number(acc) + Number(cur), 0);
+  const i = arrNumber.filter((item) => !isNaN(item));
+  return i.reduce((acc, cur) => Number(acc) + Number(cur), 0);
 }
 
 const inputPuzzle = `gtlbhbjgkrb5sixfivefivetwosix
@@ -1044,6 +1051,8 @@ xmqxqsixpgclxldnvlzvjm7nine4
 fourfive4tttldbmmkxvhqrmvmrkpxfzbd7
 44two1
 eightrtsjszc2
+No definition found.
+Search the web for "fivennhhdfpmrnpjhdm2sixkrsgdt" »
 `;
 
 const result = rebuchet(inputPuzzle);
