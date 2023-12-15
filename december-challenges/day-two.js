@@ -6,4 +6,9 @@ function sumNaturals(n) {
   }
   return result;
 }
-console.log(sumNaturals(5));
+
+function recursiveFunction(input) {
+  if (input <= 0) return 0;
+  return input + recursiveFunction(input - 1);
+}
+console.log(recursiveFunction(5));
