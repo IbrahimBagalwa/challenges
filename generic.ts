@@ -18,7 +18,7 @@ const getFirstElementGeneric = <T>(array: T[]) => {
 console.log(getFirstElementGeneric(arry))
 console.log(getFirstElementGeneric(numbers))
 
-type APIResponse<T> = {
+type APIResponse<T extends Object = { status: number }> = {
   data: T
   isError: boolean
 }
@@ -42,9 +42,21 @@ const blogResponse: BlogResponse = {
   isError: true,
 }
 
-const statusResponse: StatusResponse = {
+const statusResponse: APIResponse = {
   data: {
     status: 200,
   },
   isError: false,
 }
+
+class TakePhoto {
+  constructor(public id: number, public name: string) {}
+}
+const newPhoto = new TakePhoto(12, 'Ibrahim')
+console.log(newPhoto.name)
+abstract class UserInfo {
+  constructor(public name: string, public photo: string) {}
+}
+class UserInfoClone extends UserInfo {}
+const newUser = new UserInfoClone('Ibrahim', 'here is the image')
+console.log(newUser)
