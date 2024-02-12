@@ -3,18 +3,27 @@ const timezone = require('dayjs/plugin/timezone')
 const dayjs = require('dayjs')
 dayjs.extend(utc)
 dayjs.extend(timezone)
-const zone = dayjs.tz.guess()
+const zone = dayjs.tz.guess() //
 
+const formatDate = 'DD/MM/YYYY hh:mm:ss'
 const date = new Date()
-const americ = dayjs.tz('2024-02-08T21:04:06.369Z', 'America/Toronto')
-console.log(
-  americ.format('DD/MM/YYYY hh:mm:ss'),
-  '++++++++++++++++toronto++++++++++++++++++'
-)
+
+const americ = dayjs.tz(date, 'America/Toronto')
+console.log(americ.format(formatDate))
 
 const rwanda = dayjs(date).tz(zone)
+console.log(rwanda.format(formatDate), '+++++rwanda++++++')
 
-console.log(rwanda.format('2024-02-08T21:04:06.369Z'), '+++++rwanda++++++')
+const berlin = dayjs.tz(date).tz('Europe/Berlin')
+console.log(berlin.format(formatDate), '+++++berlin++++++')
 
-const berlin = dayjs.tz('2024-02-08T21:04:06.369Z').tz('Europe/Berlin')
-console.log(berlin.format('DD/MM/YYYY hh:mm:ss'), '+++++berlin++++++')
+const planDate = new Date()
+console.log(planDate, '++++++++++++++++++')
+
+// console.log(
+//   dayjs('2024-02-07T22:00:00.000Z').format('DD/MM/YYYY hh:mm:ss'),
+//   '==================='
+// )
+// const { find } = require('geo-tz')
+// const timeZone = find(12.826174, 45.036933)
+// console.log(timeZone)
